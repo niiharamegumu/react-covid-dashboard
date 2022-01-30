@@ -1,14 +1,12 @@
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
-import { Box, ChakraProvider } from "@chakra-ui/react";
-import { Cards } from "./features/covid/Cards/Cards";
+import { ChakraProvider, Container } from "@chakra-ui/react";
+import { DashBoard } from "./features/covid/DashBoard/DashBoard";
 
 function App() {
   return (
     <ChakraProvider>
-      <Box pt="20px">
-        <Cards />
-      </Box>
+      <Container maxW="container.xl" pt="50px" pb="80px">
+        <DashBoard />
+      </Container>
     </ChakraProvider>
   );
 }
