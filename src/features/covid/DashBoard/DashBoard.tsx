@@ -27,16 +27,16 @@ export const DashBoard: VFC = () => {
       <SwitchCountry />
       <Grid
         templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(2, 1fr)"
+        templateColumns="repeat(12, 1fr)"
         gap={4}
       >
-        <GridItem rowSpan={1} colSpan={1}>
+        <GridItem colSpan={8}>
           <Chart />
         </GridItem>
-        <GridItem rowSpan={1} colSpan={1}>
+        <GridItem colSpan={4}>
           <PieChart />
         </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
+        <GridItem colSpan={12}>
           <Cards />
         </GridItem>
       </Grid>
