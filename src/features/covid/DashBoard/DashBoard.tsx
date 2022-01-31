@@ -26,14 +26,14 @@ export const DashBoard: VFC = () => {
       </Flex>
       <SwitchCountry />
       <Grid
-        templateRows="repeat(2, 1fr)"
+        templateRows={{ base: "1fr", xl: "repeat(2, 1fr)" }}
         templateColumns="repeat(12, 1fr)"
-        gap={4}
+        gap={{ base: 2, xl: 4 }}
       >
-        <GridItem colSpan={8}>
+        <GridItem colSpan={{ base: 12, xl: 8 }}>
           <Chart />
         </GridItem>
-        <GridItem colSpan={4}>
+        <GridItem colSpan={{ base: 12, xl: 4 }}>
           <PieChart />
         </GridItem>
         <GridItem colSpan={12}>

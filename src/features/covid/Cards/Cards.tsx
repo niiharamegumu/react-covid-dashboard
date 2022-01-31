@@ -9,9 +9,9 @@ export const Cards: VFC = () => {
   const data = useSelector(selectData);
   return (
     <Grid
-      templateColumns="repeat(3, 250px)"
+      templateColumns={{ base: "1fr", xl: "repeat(3, 250px)" }}
       justifyContent="center"
-      gap={10}
+      gap={{ base: 5, xl: 10 }}
       textAlign="center"
     >
       <GridItem
