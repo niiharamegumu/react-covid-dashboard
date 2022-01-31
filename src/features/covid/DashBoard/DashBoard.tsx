@@ -18,7 +18,7 @@ export const DashBoard: VFC = () => {
 
   return (
     <>
-      <Flex justify="space-between">
+      <Flex justify="center" gap={{ base: 4, md: 10 }} mb={{ base: 4, md: 10 }}>
         <Text as="h1">コロナウイルス全世界推移</Text>
         {data && (
           <Text as="p">{new Date(data.lastUpdate).toLocaleDateString()}</Text>

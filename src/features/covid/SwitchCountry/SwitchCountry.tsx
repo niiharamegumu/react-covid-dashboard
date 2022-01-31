@@ -1,5 +1,5 @@
 import { ChangeEvent, VFC } from "react";
-import { Select } from "@chakra-ui/react";
+import { Box, Select } from "@chakra-ui/react";
 
 import { useDispatch } from "react-redux";
 import { fetchAsyncGetCountry } from "../covidSlice";
@@ -28,16 +28,18 @@ export const SwitchCountry: VFC = () => {
     "india",
   ];
   return (
-    <Select
-      placeholder="国を選んでください"
-      textTransform="capitalize"
-      onChange={onChangeSelectCountry}
-    >
-      {countries.map((country, index) => (
-        <option key={index} value={country}>
-          {country}
-        </option>
-      ))}
-    </Select>
+    <Box mb={{ base: 2, md: 6 }}>
+      <Select
+        placeholder="国を選んでください"
+        textTransform="capitalize"
+        onChange={onChangeSelectCountry}
+      >
+        {countries.map((country, index) => (
+          <option key={index} value={country}>
+            {country}
+          </option>
+        ))}
+      </Select>
+    </Box>
   );
 };
